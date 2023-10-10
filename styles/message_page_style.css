@@ -1,0 +1,31 @@
+.message_page {
+  background-color: lawngreen;
+  max-width: 100%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  transition: left 2s;
+  position: relative;
+}
+.message_page div {
+  margin: 1.5em 0em;
+}
+.create_message,
+.inbox {
+  border: 3px black solid;
+  padding: 0.5em 2em;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px black;
+  background-color: rgb(171, 232, 171);
+  /*  */
+}
+.create_message:hover,
+.inbox:hover {
+  box-shadow: 5px 5px 5px black;
+}
+.create_message:active,
+.inbox:active {
+  transform: scale(0.9);
+}

@@ -1,0 +1,83 @@
+.inbox_of_specific_person {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: orange;
+  left: 0;
+  top: 0;
+  position: relative;
+  transition: left 2s;
+}
+.inbox_of_specific_person div {
+  margin: 1em 0px;
+}
+.person_name {
+  font-size: 2.2em;
+}
+.message_list_div {
+  width: 100%;
+}
+.message_list {
+  width: 100%;
+}
+.message_list li {
+  width: 100%;
+  display: flex;
+}
+.message_list li div {
+  margin: 1em 1em;
+  background-color: white;
+  width: 45%;
+  padding: 1em;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+
+.go_right {
+  justify-content: flex-end;
+}
+.send_message_input_of_inbox {
+  font-size: 1.5em;
+  padding: 1em;
+  border: 3px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+.send_message_input_of_inbox:focus {
+  box-shadow: 5px 5px 5px black;
+}
+.send_button_of_inbox {
+  font-size: 1.5em;
+  padding: 0.3em 1em;
+  border: 3px black solid;
+  background-color: lawngreen;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+}
+.send_button_of_inbox:hover {
+  box-shadow: 3px 3px 3px black;
+}
+.send_button_of_inbox:active {
+  transform: scale(0.9);
+}
+.back_button_of_inbox_of_specific_person {
+  font-size: 1.5em;
+  padding: 0.3em 1em;
+  border: 3px black solid;
+  background-color: rgb(171, 201, 141);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+  position: absolute;
+  left: 0px;
+  top: -24px;
+}
+.back_button_of_inbox_of_specific_person:hover {
+  box-shadow: 3px 3px 3px black;
+}
+.back_button_of_inbox_of_specific_person:active {
+  transform: scale(0.9);
+}

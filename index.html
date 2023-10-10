@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/login_page_style.css" />
+    <link rel="stylesheet" href="styles/message_page_style.css" />
+    <link rel="stylesheet" href="styles/create_message_page_style.css" />
+    <link rel="stylesheet" href="styles/inbox_page.css" />
+    <link rel="stylesheet" href="styles/inbox_of_specific_person.css" />
+    <link rel="stylesheet" href="styles/on_off_style.css" />
+    <script src="scripts/changing_page.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header1">AR7 Chatting App</div>
+        <div class="header2">A NEW WORLD OF CHATTING</div>
+        <div class="program_message"></div>
+        <div class="displayed_username"></div>
+      </header>
+      <main>
+        <div class="login_page">
+          <div class="login1">Login</div>
+          <div class="login2">
+            <input type="text" placeholder="Username" class="username_input" />
+          </div>
+          <div class="login3">
+            <input
+              type="password"
+              placeholder="Password"
+              class="password_input"
+            />
+          </div>
+          <div class="login4">
+            <input type="submit" class="submit_button" />
+          </div>
+          <div class="create_account_text">
+            Do Not have an Account?
+            <div class="create_one">Create One</div>
+          </div>
+        </div>
+        <div class="create_account_page inactive">
+          <div class="create_account1">Create Account</div>
+          <div class="create_account2">
+            <input
+              type="text"
+              placeholder="Create an Username"
+              class="create_account_username_input"
+            />
+          </div>
+          <div class="create_account3">
+            <input
+              type="password"
+              placeholder="Create an Password"
+              class="create_account_password_input"
+            />
+          </div>
+          <div class="create_account3">
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              class="create_account_confirm_password_input"
+            />
+          </div>
+          <div class="create_account4">
+            <input type="submit" class="create_account_submit_button" />
+          </div>
+        </div>
+        <div class="message_page inactive">
+          <div class="Welcome Message">
+            Welcome <span class="name_text"></span>
+          </div>
+          <div class="create_message">Create Message</div>
+          <div class="inbox">Inbox</div>
+        </div>
+        <div class="create_message_page inactive">
+          <div class="create_message_page_back_button">Back</div>
+          <div class="create_message_page1">
+            <textarea
+              class="message_input"
+              placeholder="Enter Your Message"
+            ></textarea>
+          </div>
+          <div class="create_message_page2">
+            <input
+              type="text"
+              class="message_recipient_input"
+              placeholder="Enter Recipient"
+            />
+          </div>
+          <div class="create_message_page3">
+            <div class="send_button">Send</div>
+          </div>
+        </div>
+        <div class="inbox_page inactive">
+          <div class="inbox_page_back_button">Back</div>
+          <div class="inbox_page1">Inbox</div>
+          <div class="inbox_page2">
+            <ul class="inbox_list">
+              <li>Jonathon</li>
+              <li>Lucifer</li>
+              <li>Hello</li>
+            </ul>
+          </div>
+        </div>
+        <div class="inbox_of_specific_person inactive">
+          <div class="back_button_of_inbox_of_specific_person">Back</div>
+          <div class="person_name">Jennifer</div>
+          <div class="message_list_div">
+            <ul class="message_list">
+              <li class="test1"><div class="">hi there</div></li>
+              <li><div class="">Hello</div></li>
+            </ul>
+          </div>
+          <div class="send_message_input_inbox_div">
+            <input
+              type="text"
+              class="send_message_input_of_inbox"
+              placeholder="Write Something"
+            />
+          </div>
+          <div class="send_button_of_inbox">Send</div>
+        </div>
+      </main>
+      <footer><p>CopyRight @ Apurbo Roy</p></footer>
+    </div>
+  </body>
+</html>

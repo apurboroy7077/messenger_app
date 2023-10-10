@@ -1,0 +1,80 @@
+.login_page,
+.create_account_page {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: orange;
+  padding: 5%;
+  left: 0px;
+  opacity: 1;
+  transition: left 3s;
+}
+.login1,
+.login2,
+.login3,
+.login4,
+.create_account1,
+.create_account2,
+.create_account3,
+.create_account4 {
+  margin-bottom: 1em;
+}
+.login1,
+.create_account1 {
+  font-size: 2em;
+}
+.username_input,
+.password_input,
+.create_account_username_input,
+.create_account_password_input,
+.create_account_confirm_password_input {
+  font-size: 1.5em;
+  padding: 0.5em;
+  border: 3px black solid;
+  border-radius: 5px;
+  outline: none;
+}
+.username_input:focus,
+.password_input:focus,
+.create_account_username_input:focus,
+.create_account_password_input:focus,
+.create_account_confirm_password_input:focus {
+  box-shadow: 5px 5px 5px black;
+}
+.submit_button,
+.create_account_submit_button {
+  font-size: 1.3em;
+  padding: 0.3em 1em;
+  border: 3px black solid;
+  background-color: rgb(181, 228, 134);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit_button:hover,
+.create_account_submit_button:hover {
+  box-shadow: 3px 3px 3px black;
+}
+.submit_button:active,
+.create_account_submit_button:active {
+  transform: scale(0.9);
+}
+.create_account_text {
+  display: flex;
+  font-size: 1.5em;
+  align-items: center;
+}
+.create_one {
+  background-color: lawngreen;
+  margin-left: 1em;
+  padding: 0.2em 0.6em;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.create_one:hover {
+  box-shadow: 2px 2px 2px black;
+}
+.create_one:active {
+  transform: scale(0.9);
+}

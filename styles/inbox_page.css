@@ -1,0 +1,53 @@
+.inbox_page {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lawngreen;
+  left: 0px;
+  transition: left 2s;
+  position: relative;
+}
+
+.inbox_page div {
+  margin: 0.5em 0em;
+}
+.inbox_list {
+  list-style: none;
+}
+.inbox_list li {
+  margin: 1em 0em;
+  border: 3px black solid;
+  padding: 0.5em 3em;
+  font-size: 1.5em;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
+}
+.inbox_list li:hover {
+  transform: scale(1.05);
+}
+.inbox_list li:active {
+  transform: scale(0.9);
+}
+.inbox_page1 {
+  font-size: 2.5em;
+}
+.inbox_page_back_button {
+  font-size: 1.5em;
+  padding: 0.3em 1em;
+  border: 3px black solid;
+  background-color: rgb(171, 201, 141);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+  position: absolute;
+  left: 0px;
+  top: -12px;
+}
+.inbox_page_back_button:hover {
+  box-shadow: 3px 3px 3px black;
+}
+.inbox_page_back_button:active {
+  transform: scale(0.9);
+}
