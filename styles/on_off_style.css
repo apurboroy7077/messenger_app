@@ -2,3 +2,7 @@
   position: absolute;
   left: -200%;
 }
+.logout_off {
+  opacity: 0;
+  pointer-events: none;
+}

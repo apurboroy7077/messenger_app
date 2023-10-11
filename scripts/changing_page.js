@@ -5,7 +5,7 @@ let current_user;
 
 let chat_database = localStorage.getItem("chat_database");
 if (chat_database == null) {
-  chat_database = [usernames, passwords, messages];
+  chat_database = [usernames, passwords, messages, current_user];
   chat_database = JSON.stringify(chat_database);
   localStorage.setItem("chat_database", chat_database);
 } else {
@@ -13,9 +13,10 @@ if (chat_database == null) {
   usernames = chat_database[0];
   passwords = chat_database[1];
   messages = chat_database[2];
+  current_user = chat_database[3];
 }
 let save_to_localstorage = () => {
-  let chat_database = [usernames, passwords, messages];
+  let chat_database = [usernames, passwords, messages, current_user];
   chat_database = JSON.stringify(chat_database);
   localStorage.setItem("chat_database", chat_database);
 };
@@ -28,6 +29,8 @@ container.addEventListener("click", () => {
   inbox_page_name_button();
   updating_messages();
   adding_beauty_to_message_list();
+  visibility_of_logout_button();
+  username_display_update();
 });
 let create_account_button_function = () => {
   let button = document.getElementsByClassName("create_one")[0];
@@ -218,6 +221,8 @@ let function_of_send_button_in_create_message_page = () => {
     let message_data = [[current_user], [recipient], [message]];
     messages.push(message_data);
     show_message("Message Sent Successfull");
+    let message_box = document.getElementsByClassName("message_input")[0];
+    message_box.value = "";
   });
 };
 function_of_send_button_in_create_message_page();
@@ -314,3 +319,55 @@ let function_of_send_button_in_personal_message_page = () => {
   });
 };
 function_of_send_button_in_personal_message_page();
+let visibility_of_logout_button = () => {
+  let button = document.getElementsByClassName("logout_button")[0];
+  if (current_user == null) {
+    button.classList.add("logout_off");
+  } else if (button.classList.contains("logout_off")) {
+    button.classList.remove("logout_off");
+  }
+};
+visibility_of_logout_button();
+let logout_button_function = () => {
+  let button = document.getElementsByClassName("logout_button")[0];
+  button.addEventListener("click", () => {
+    current_user = null;
+  });
+};
+logout_button_function();
+let username_display_update = () => {
+  let displayed_box = document.getElementsByClassName("displayed_username")[0];
+  if (current_user == null) {
+    displayed_box.innerHTML = "";
+  } else {
+    displayed_box.innerHTML = current_user;
+  }
+};
+username_display_update();
+let logout_button_click_and_go_to_homepage_function = () => {
+  let button = document.getElementsByClassName("logout_button")[0];
+  button.addEventListener("click", () => {
+    let all_items = document.getElementsByTagName("main")[0].children;
+    all_items = Array.from(all_items);
+    for (let i = 0; i < all_items.length; i++) {
+      let item = all_items[i];
+      item.classList.add("inactive");
+    }
+    let login_page = document.getElementsByClassName("login_page")[0];
+    login_page.classList.remove("inactive");
+  });
+};
+logout_button_click_and_go_to_homepage_function();
+let if_allready_logged = () => {
+  if (current_user != null) {
+    let all_pages = document.getElementsByTagName("main")[0].children;
+    all_pages = Array.from(all_pages);
+    for (let i = 0; i < all_pages.length; i++) {
+      let page = all_pages[i];
+      page.classList.add("inactive");
+    }
+    let home_page = document.getElementsByClassName("message_page")[0];
+    home_page.classList.remove("inactive");
+  }
+};
+if_allready_logged();
